@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo_luxury"
+        android:roundIcon="@drawable/ic_logo_luxury"
+        android:label="StreamVision"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true">
+        <activity android:name=".ui.login.LoginActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.home.HomeActivity" android:exported="false"/>
+        <activity android:name=".ui.live.LiveActivity" android:exported="false"/>
+        <activity android:name=".ui.movies.MoviesActivity" android:exported="false"/>
+        <activity android:name=".ui.series.SeriesActivity" android:exported="false"/>
+        <activity android:name=".ui.settings.SettingsActivity" android:exported="false"/>
+        <activity android:name=".ui.player.PlayerActivity" android:exported="false"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/PlayerTheme"/>
+    </application>
+</manifest>

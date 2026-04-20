@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D0D1A">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#12121F"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="◀" android:textColor="#6C63FF" android:textSize="20sp"
+            android:id="@+id/btnBack" android:clickable="true" android:focusable="true"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="📡 Live TV"
+            android:textColor="#F0F4FF" android:textSize="18sp" android:textStyle="bold"/>
+
+        <EditText android:id="@+id/etSearch"
+            android:layout_width="200dp" android:layout_height="36dp"
+            android:hint="🔍 Suchen..." android:textColor="#F0F4FF"
+            android:textColorHint="#3D4466" android:textSize="13sp"
+            android:background="@drawable/input_bg"
+            android:paddingStart="12dp" android:paddingEnd="12dp" android:singleLine="true"/>
+    </LinearLayout>
+
+    <!-- Main content: 3 columns -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- LEFT: Categories -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategories"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:background="#0A0A16"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:clipToPadding="false"/>
+
+        <!-- Divider -->
+        <View android:layout_width="1dp" android:layout_height="match_parent"
+            android:background="#1A1A2E"/>
+
+        <!-- MIDDLE: Channel list -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ProgressBar android:id="@+id/progressBar"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:indeterminateTint="#6C63FF"
+                android:visibility="visible" android:layout_marginTop="40dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChannels"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View android:layout_width="1dp" android:layout_height="match_parent"
+            android:background="#1A1A2E"/>
+
+        <!-- RIGHT: Preview panel -->
+        <LinearLayout
+            android:id="@+id/llPreview"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#0A0A16"
+            android:padding="16dp">
+
+            <!-- Preview image / placeholder -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="#12121F"
+                android:layout_marginBottom="12dp">
+
+                <ImageView android:id="@+id/ivPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="📺"
+                    android:textSize="40sp"
+                    android:id="@+id/tvPreviewIcon"/>
+            </FrameLayout>
+
+            <!-- Channel name -->
+            <TextView android:id="@+id/tvPreviewName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F0F4FF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:text="Kanal wählen..."/>
+
+            <!-- EPG info -->
+            <TextView android:id="@+id/tvPreviewEpg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#8892B0"
+                android:textSize="12sp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Quality badge -->
+            <TextView android:id="@+id/tvPreviewQuality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Play button -->
+            <TextView android:id="@+id/btnPlay"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="▶  Abspielen"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/btn_primary"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

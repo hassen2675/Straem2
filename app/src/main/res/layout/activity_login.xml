@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg">
+
+    <!-- Decorative purple glow top-left -->
+    <View android:layout_width="320dp" android:layout_height="320dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="-100dp" android:layout_marginTop="-100dp"
+        android:background="@drawable/blob_purple" android:alpha="0.18"/>
+
+    <!-- Decorative gold glow bottom-right -->
+    <View android:layout_width="280dp" android:layout_height="280dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="-80dp" android:layout_marginBottom="-80dp"
+        android:background="@drawable/blob_gold" android:alpha="0.12"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center"
+            android:paddingStart="32dp" android:paddingEnd="32dp"
+            android:paddingTop="50dp" android:paddingBottom="40dp"
+            android:minHeight="700dp">
+
+            <!-- LUXURY LOGO -->
+            <ImageView android:layout_width="130dp" android:layout_height="130dp"
+                android:src="@drawable/ic_logo_luxury"
+                android:layout_marginBottom="18dp"/>
+
+            <!-- App Name with gold color -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="StreamVision"
+                android:textColor="#FFD700"
+                android:textSize="36sp" android:textStyle="bold"
+                android:letterSpacing="0.04"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Tagline -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="✦   PREMIUM IPTV   ✦"
+                android:textColor="#4A4A7A" android:textSize="11sp"
+                android:letterSpacing="0.35"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Gold line divider -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="28dp">
+                <View android:layout_width="40dp" android:layout_height="1dp" android:background="#FFD700" android:alpha="0.3"/>
+                <View android:layout_width="6dp" android:layout_height="6dp" android:background="#FFD700" android:alpha="0.6"
+                    android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+                <View android:layout_width="40dp" android:layout_height="1dp" android:background="#FFD700" android:alpha="0.3"/>
+            </LinearLayout>
+
+            <!-- Login Card -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/card_luxury"
+                android:padding="28dp">
+
+                <!-- Username label -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    <View android:layout_width="3dp" android:layout_height="14dp"
+                        android:background="#FFD700" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="BENUTZERNAME"
+                        android:textColor="#FFD700" android:textSize="10sp"
+                        android:letterSpacing="0.2" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <EditText android:id="@+id/etUsername"
+                    android:layout_width="match_parent" android:layout_height="54dp"
+                    android:hint="Benutzername eingeben"
+                    android:textColor="#F0F4FF" android:textColorHint="#2A2A50"
+                    android:textSize="15sp" android:background="@drawable/input_gold"
+                    android:paddingStart="18dp" android:paddingEnd="18dp"
+                    android:singleLine="true" android:layout_marginBottom="22dp"/>
+
+                <!-- Password label -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    <View android:layout_width="3dp" android:layout_height="14dp"
+                        android:background="#FFD700" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="PASSWORT"
+                        android:textColor="#FFD700" android:textSize="10sp"
+                        android:letterSpacing="0.2" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <EditText android:id="@+id/etPassword"
+                    android:layout_width="match_parent" android:layout_height="54dp"
+                    android:hint="Passwort eingeben"
+                    android:textColor="#F0F4FF" android:textColorHint="#2A2A50"
+                    android:textSize="15sp" android:background="@drawable/input_gold"
+                    android:paddingStart="18dp" android:paddingEnd="18dp"
+                    android:inputType="textPassword" android:singleLine="true"
+                    android:layout_marginBottom="28dp"/>
+
+                <!-- Error message -->
+                <TextView android:id="@+id/tvError"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="#FF4D6D" android:textSize="13sp"
+                    android:gravity="center" android:visibility="gone"
+                    android:layout_marginBottom="14dp"/>
+
+                <!-- Gold ANMELDEN button -->
+                <Button android:id="@+id/btnConnect"
+                    android:layout_width="match_parent" android:layout_height="56dp"
+                    android:text="ANMELDEN"
+                    android:textColor="#0A0A1E" android:textSize="16sp"
+                    android:textStyle="bold" android:letterSpacing="0.12"
+                    android:background="@drawable/btn_gold"
+                    android:stateListAnimator="@null"/>
+
+            </LinearLayout>
+
+            <!-- Server info subtle -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="rianto.xyz  •  Port 8080"
+                android:textColor="#1E1E3A" android:textSize="11sp"
+                android:layout_marginTop="24dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="StreamVision v1.0  •  Premium"
+                android:textColor="#16163A" android:textSize="10sp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

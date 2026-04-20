@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#0D0D1A</color>
+    <color name="bg2">#12121F</color>
+    <color name="surface">#1A1A2E</color>
+    <color name="surface2">#252540</color>
+    <color name="accent">#6C63FF</color>
+    <color name="accent2">#FF6B9D</color>
+    <color name="gold">#FFD700</color>
+    <color name="text_primary">#F0F4FF</color>
+    <color name="text_secondary">#8892B0</color>
+    <color name="text_dim">#3D4466</color>
+    <color name="success">#00D9A5</color>
+    <color name="error">#FF4D6D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="tile_live">#6C63FF</color>
+    <color name="tile_movies">#FF6B9D</color>
+    <color name="tile_series">#00D9A5</color>
+</resources>

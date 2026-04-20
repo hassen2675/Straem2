@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"/>
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#AA000000"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="◀"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginEnd="12dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/tvChannelName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#CCFFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+
+    <!-- Loading -->
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:indeterminateTint="#6C63FF"
+        android:visibility="visible"/>
+
+    <!-- Error -->
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#FF4D6D"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="#CC000000"
+        android:padding="20dp"
+        android:visibility="gone"/>
+
+    <!-- Channel navigation buttons - bottom right -->
+    <LinearLayout
+        android:id="@+id/llNavButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:orientation="vertical"
+        android:margin="16dp"
+        android:padding="4dp"
+        android:background="#AA000000">
+
+        <TextView
+            android:id="@+id/btnPrevChannel"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="▲"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:background="#556C63FF"
+            android:layout_marginBottom="6dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/tvChannelIndex"
+            android:layout_width="56dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/btnNextChannel"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="▼"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:background="#556C63FF"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+</FrameLayout>

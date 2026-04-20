@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+
+        <!-- Logo + Title -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+            <ImageView android:layout_width="44dp" android:layout_height="44dp"
+                android:src="@drawable/ic_logo" android:layout_marginEnd="12dp"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Einstellungen" android:textColor="@color/text_primary"
+                    android:textSize="22sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="StreamVision" android:textColor="@color/accent" android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Account Card -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_bg"
+            android:padding="20dp" android:layout_marginBottom="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ACCOUNT" android:textColor="@color/accent"
+                android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="14dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="10dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Benutzername"
+                    android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                <TextView android:id="@+id/tvUsername" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="@color/text_primary"
+                    android:textSize="14sp" android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="10dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Status"
+                    android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="@color/success"
+                    android:textSize="14sp" android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="10dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Gültig bis"
+                    android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                <TextView android:id="@+id/tvExpiry" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="@color/text_primary"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Max. Verbindungen"
+                    android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                <TextView android:id="@+id/tvMaxConn" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="@color/text_primary"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Server Card -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_bg"
+            android:padding="20dp" android:layout_marginBottom="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="SERVER" android:textColor="@color/accent"
+                android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+            <TextView android:id="@+id/tvServer" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textColor="@color/text_secondary"
+                android:textSize="13sp" android:singleLine="true" android:ellipsize="middle"/>
+        </LinearLayout>
+
+        <!-- App Card -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_bg"
+            android:padding="20dp" android:layout_marginBottom="24dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="APP INFO" android:textColor="@color/accent"
+                android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Version"
+                    android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                <TextView android:id="@+id/tvVersion" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="@color/text_primary"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button android:id="@+id/btnLogout" android:layout_width="match_parent"
+            android:layout_height="52dp" android:text="Abmelden"
+            android:textColor="@color/error" android:textSize="15sp" android:textStyle="bold"
+            android:backgroundTint="#1AFF4D6D" android:stateListAnimator="@null"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Outer glow -->
+    <path android:fillColor="#15FFD700"
+        android:pathData="M100,10 A90,90,0,1,1,100,190 A90,90,0,1,1,100,10Z"/>
+
+    <!-- Main dark circle -->
+    <path android:fillColor="#0A0A1E"
+        android:pathData="M100,20 A80,80,0,1,1,100,180 A80,80,0,1,1,100,20Z"/>
+
+    <!-- Gold ring -->
+    <path android:fillColor="#00000000"
+        android:strokeColor="#FFD700"
+        android:strokeWidth="3"
+        android:pathData="M100,25 A75,75,0,1,1,100,175 A75,75,0,1,1,100,25Z"/>
+
+    <!-- Inner purple circle -->
+    <path android:fillColor="#1A0A4A"
+        android:pathData="M100,35 A65,65,0,1,1,100,165 A65,65,0,1,1,100,35Z"/>
+
+    <!-- Crown shape -->
+    <path android:fillColor="#FFD700"
+        android:pathData="M60,95 L60,115 L140,115 L140,95 L125,80 L112,100 L100,75 L88,100 L75,80 Z"/>
+
+    <!-- Crown jewels -->
+    <path android:fillColor="#FF4D6D"
+        android:pathData="M100,82 A5,5,0,1,1,100,92 A5,5,0,1,1,100,82Z"/>
+    <path android:fillColor="#6C63FF"
+        android:pathData="M79,85 A4,4,0,1,1,79,93 A4,4,0,1,1,79,85Z"/>
+    <path android:fillColor="#00D9A5"
+        android:pathData="M121,85 A4,4,0,1,1,121,93 A4,4,0,1,1,121,85Z"/>
+
+    <!-- TV screen below crown -->
+    <path android:fillColor="#FFD700" android:fillAlpha="0.9"
+        android:pathData="M72,118 L128,118 Q132,118 132,122 L132,142 Q132,146 128,146 L72,146 Q68,146 68,142 L68,122 Q68,118 72,118Z"/>
+
+    <!-- TV screen inner -->
+    <path android:fillColor="#0A0A1E"
+        android:pathData="M74,120 L126,120 Q129,120 129,123 L129,141 Q129,144 126,144 L74,144 Q71,144 71,141 L71,123 Q71,120 74,120Z"/>
+
+    <!-- Play triangle -->
+    <path android:fillColor="#FFD700"
+        android:pathData="M88,126 L116,132 L88,138Z"/>
+
+    <!-- TV stand -->
+    <path android:fillColor="#FFD700" android:fillAlpha="0.8"
+        android:pathData="M94,146 L93,154 L107,154 L106,146Z"/>
+    <path android:fillColor="#FFD700" android:fillAlpha="0.8"
+        android:pathData="M86,154 L114,154 L114,157 L86,157Z"/>
+
+    <!-- Stars decoration -->
+    <path android:fillColor="#FFD700"
+        android:pathData="M45,55 L47,61 L53,61 L48,65 L50,71 L45,67 L40,71 L42,65 L37,61 L43,61Z"/>
+    <path android:fillColor="#FFD700" android:fillAlpha="0.6"
+        android:pathData="M155,55 L156.5,60 L162,60 L157.5,63 L159,68 L155,65 L151,68 L152.5,63 L148,60 L153.5,60Z"/>
+    <path android:fillColor="#FFD700" android:fillAlpha="0.4"
+        android:pathData="M38,130 L39,133 L42,133 L40,135 L41,138 L38,136 L35,138 L36,135 L34,133 L37,133Z"/>
+    <path android:fillColor="#6C63FF"
+        android:pathData="M162,120 L163,123 L166,123 L164,125 L165,128 L162,126 L159,128 L160,125 L158,123 L161,123Z"/>
+
+    <!-- App name -->
+    <path android:fillColor="#FFD700"
+        android:pathData="M55,170 Q55,166 59,166 L141,166 Q145,166 145,170 L145,178 Q145,182 141,182 L59,182 Q55,182 55,178Z"/>
+
+    <path android:fillColor="#0A0A1E"
+        android:pathData="M65,171 L70,171 L70,181 L67,181 L67,173 L65,173Z
+                          M71,171 L79,171 L79,173 L74,173 L74,175 L78,175 L78,177 L74,177 L74,179 L79,179 L79,181 L71,181Z
+                          M82,171 L90,178 L90,171 L93,171 L93,181 L90,181 L82,174 L82,181 L79,181 L79,171Z
+                          M97,171 L105,171 L105,175 L102,175 L102,173 L100,173 L100,181 L97,181Z
+                          M109,171 L109,181 L106,181 L106,171Z
+                          M113,171 L121,171 L121,173 L116,173 L116,181 L113,181Z
+                          M125,171 L125,175 L129,175 L129,171 L132,171 L132,181 L129,181 L129,177 L125,177 L125,181 L122,181 L122,171Z"/>
+</vector>
